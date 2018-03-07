@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.8)
+project(Demo1)
+find_package(OpenCV)
+include_directories(${OpenCV_INCLUDE_DIRS})
+set(CMAKE_CXX_STANDARD 11)
+set(SOURCE_FILES main.cpp camera.h identification.h UserInterface.h feedback.h Image.h)
+add_executable(Demo1 ${SOURCE_FILES})
+target_link_libraries( Demo1 ${OpenCV_LIBS} )
